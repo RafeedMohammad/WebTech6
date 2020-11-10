@@ -4,11 +4,24 @@
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 
+		$error = false; 
+
 		if(file_exists('users/'.$username. '.xml'))
 		{
-			$xml = new SimpleXMLElement('test'.$username. '.xml', 0, true);
-			print_r($xml);
+			$xml = new SimpleXMLElement('users/'.$username. '.xml', 0, true);
+			if($password == $xml->password)
+			{
+				session_start();
+				$_SESSION['username'] = $username;
+				header ('Location: dashboard.php');
+				die;  
+			}
+
+
+
 		}
+
+		$error = true; 
 	} 
 
  ?>
@@ -26,6 +39,8 @@
 		<p>Password: <input type="password" name="password"></p>
 		<input type="submit" value="Login" name="login">
 	</form>
+
+	<a href="register.php">Register</a>
 
 </body>
 </html>
