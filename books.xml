@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+	<books>
+		<book>
+			<number>1</number>
+			<name>Competitive Programming</name>
+			<publisher>Springer</publisher>
+			<isbn>1001</isbn>
+			<image>resources/default.png</image>
+			<delete>no image</delete>
+				
+			
+		</book>
+	</books>

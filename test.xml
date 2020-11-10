@@ -1,4 +1,7 @@
-<users>
-	<email>rafeed@gmail.com</email>
-	<password>123</password>
-</users>
+<?xml version="1.0" encoding="UTF-8" ?>
+
+	<users>
+		<email>rafeed@gmail.com</email>
+		<password>123</password>
+	</users>
+
